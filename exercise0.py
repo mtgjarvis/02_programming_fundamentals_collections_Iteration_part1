@@ -1,6 +1,6 @@
 fav_colours = ['blue', 'brown', 'black', 'grey']
 fam_age = [40, 42, 45, 7, 33, 30]
-coin_flip = ['heads', 'tails', 'heads', 'head', 'tails', 'heads']
+coin_flip = ['heads', 'tails', 'heads', 'tails', 'tails', 'heads']
 fav_artists = ['Leonard Cohen', 'Dylan', 'LCD Sound System']
 
 fav_words = {
@@ -30,3 +30,31 @@ for key, val in friends_fam.items():
 friends_fam.update({'Baby': 0})
 
 print(fav_movies.get("Arrival"))
+
+print(fav_colours[-1])
+
+cities['Halifax'] =  431000
+
+coin_flip.reverse()
+print(coin_flip)
+
+print(cities.get("Paris"))
+
+for name in fav_artists:
+    print(f'I think {name} is great.')
+
+print(fav_artists[0: 2])
+
+for key, value in fav_movies.items():
+    print(f'{key} cam out in {value}')
+
+# print("-----")
+# friends_fam2 = sorted(friends_fam.items(), reverse=True, key = lambda x: x[1])
+# print(friends_fam2)
+
+friends_fam = sorted(friends_fam.values(), reverse=True)
+print(friends_fam)
+
+fav_movies['Beauty and the Beast'] = 1991
+fav_movies['Beauty and the Beast'] =  2017
+print(fav_movies)
