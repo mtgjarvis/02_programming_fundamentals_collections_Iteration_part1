@@ -163,13 +163,16 @@ grocery_list = ["carrots", "toilet paper", "apples", "salmon"]
 
 # prints grocery_list vertically with *
 
-def grocery_prt(x):
-    for grocery in grocery_list:
-        grocery = (f'* {grocery}')
-        print(grocery)
+def grocery_display(a_list):
+    to_print = ''
+    for item in a_list:
+        to_print += f'* {item}\n'
+    return to_print
 
 grocery_list.append('rice')
-grocery_prt(grocery_list)
+grocery_display(grocery_list)
+
+print(grocery_display(grocery_list))
 
 print('Number of items to pick up', len(grocery_list))
 
