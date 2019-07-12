@@ -141,3 +141,51 @@ for item in countries:
         not_island.append(item)
 print(countries)
 print(not_island)
+
+# made a list of expenses and summed the values
+#Add up the numbers and output the result. Put this code into a method. The method should take a list as an argument and return the sum of the expenses in the list. Call the method twice with different lists.
+
+year_end_2018 = [1224, 2126, 332, 654, 932, 234]
+year_end_2019 = [4344, 23, 542, 753, 345, 23, 23]
+
+
+def sum_of_year(x):
+    total_cost = 0
+    for item in (x):
+        total_cost += item
+    return total_cost
+
+
+print(sum_of_year(year_end_2018))
+print(sum_of_year(year_end_2019))
+
+grocery_list = ["carrots", "toilet paper", "apples", "salmon"]
+
+# prints grocery_list vertically with *
+def grocery_prt(x):
+    for grocery in grocery_list:
+        grocery = (f'* {grocery}')
+        print(grocery)
+grocery_list.append('rice')
+grocery_prt(grocery_list)
+
+print('Number of items to pick up', len(grocery_list))
+
+# checks if bannans is in list
+if 'bannans' in grocery_list > 0:
+    print("You don't need bannans today.")
+else:
+    print('You need to pick up bannans today.')
+
+# displays 2nd item in list before the sort below
+print(grocery_list[1])
+
+#sorts and prints list using function grocery_prt
+print(grocery_prt(grocery_list.sort()))
+
+# removed salmon from list
+grocery_list.remove('salmon')
+print(grocery_list)
+
+
+
