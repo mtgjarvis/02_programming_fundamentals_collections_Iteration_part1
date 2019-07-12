@@ -187,5 +187,31 @@ print(grocery_prt(grocery_list.sort()))
 grocery_list.remove('salmon')
 print(grocery_list)
 
+student = {
+    'cohort1': 34, 
+    'cohort2': 42,
+    'cohort3': 22
+}
 
+for key, val in student.items():
+    print(f'{key} has {val} students.')
+
+student['cohort4'] = 43
+
+print(student.keys())
+
+
+# class size increased by %5
+for key in student:
+    student[key] *= 1.05
+
+print(student.items())
+
+del student['cohort2']
+
+# sums the total of student across cohorts
+total_students = 0
+for val in student.values():
+    total_students = val + total_students
+print(total_students)
 
