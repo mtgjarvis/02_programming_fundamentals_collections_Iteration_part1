@@ -27,6 +27,7 @@ sorted(friends_fam)
 for key, val in friends_fam.items():
     print(f'{key} is {val} old')
 
+
 friends_fam.update({'Baby': 0})
 
 print(fav_movies.get("Arrival"))
@@ -52,9 +53,91 @@ for key, value in fav_movies.items():
 # friends_fam2 = sorted(friends_fam.items(), reverse=True, key = lambda x: x[1])
 # print(friends_fam2)
 
-friends_fam = sorted(friends_fam.values(), reverse=True)
+friends_fam_list = sorted(friends_fam.values(), reverse=True)
+print(friends_fam_list)
+
+fav_movies['Beauty and the Beast'] = [1999, 2017]
+print(fav_movies)
+
+for key, val in friends_fam.items():
+    if val < 40:
+        print(f'{key} is under 40')
+
+print(max(friends_fam_list))
+
+print(coin_flip.count('heads'))
+
+fav_artists.remove('Dylan')
+
+# removes 1 from the value of Halifax
+cities['Halifax'] -= 1
+
+# adds all the values together
+print(sum(cities.values()))
+
+# prints message if value is above or below a certain age
+for key, val in friends_fam.items():
+    if val >= 41:
+        print(f'{key} is old.')
+    else:
+        print(f'{key} is young.')
+
+# printed the last 2 items in the list
+print(fav_colours[-2:])
+
+# added 1 year to every key's value
+for val in friends_fam:
+    friends_fam[val] += 1
 print(friends_fam)
 
-fav_movies['Beauty and the Beast'] = 1991
-fav_movies['Beauty and the Beast'] =  2017
-print(fav_movies)
+# added 2 colors
+fav_colours.extend(['Green', 'Purple'])
+
+# added dictionary with nested lists
+movies_year = {
+    '1999': ['The Matrix', 'Star Wars: Episode 1', 'The Mummy'],
+    '2009': ['Avatar', 'Star Trek', 'District 9'],
+    '2019': ['How to Train Your Dragon 3', 'Toy Story 4', 'Star Wars: Episode 9']
+}
+# added list with nested lists
+phone_buttons = [
+    [1, 2, 3],
+    [4, 5, 6],
+    ['*', 0, '#']
+]
+
+# created a list with a dict and list nested
+countries = [
+    {'name': 'Canada', 'continent': 'North America', 'island': 'No'},
+    {'name': 'USA', 'continent': 'North America', 'island': 'No'},
+    {'name': 'Australia', 'continent': 'Australia', 'island': 'Yes'}
+]
+
+# printed the string 20 times
+print("I will not skateboard in the halls" * 20)
+
+# created a list with the string repeated 20 times
+skateboard_20 = ["I will not skateboard in the halls" *20]
+
+# created list using range
+num_list = list(range(1, 51))
+print(num_list)
+
+# sums all the number in num_list
+new_sum = 0
+for num in num_list:
+    new_sum += num
+print(new_sum)
+
+new_num_list = []
+for val in num_list:
+    for x in range(1,4):
+        new_num_list.append(val)
+print(new_num_list)
+
+not_island = []
+for item in countries:
+    if item['island'] == 'No':
+        not_island.append(item)
+print(countries)
+print(not_island)
