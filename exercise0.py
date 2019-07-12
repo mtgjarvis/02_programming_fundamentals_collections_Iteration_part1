@@ -162,10 +162,12 @@ print(sum_of_year(year_end_2019))
 grocery_list = ["carrots", "toilet paper", "apples", "salmon"]
 
 # prints grocery_list vertically with *
+
 def grocery_prt(x):
     for grocery in grocery_list:
         grocery = (f'* {grocery}')
         print(grocery)
+
 grocery_list.append('rice')
 grocery_prt(grocery_list)
 
@@ -234,4 +236,20 @@ def fizzbuzz(start, end):
 
 for result in fizzbuzz(1, 101):
     print(result)
+
+# Asks for number of pizzas customer wants and then asks for each pizza how many toppings 
+# printing the number of toppings for each pizza on each loop
+
+
+def pizza_maker():
+    print('How man pizzas do you want to order?')
+    quantity_pizza = int(input())
+    indiv_pizza = range(1,(quantity_pizza+1))
+    for x in indiv_pizza:
+        print(f'How many toppings for pizza {x}?')
+        num_toppings = int(input())
+        print(f'You have ordered a pizza with {num_toppings} toppings')
+
+pizza_maker()
+
 
