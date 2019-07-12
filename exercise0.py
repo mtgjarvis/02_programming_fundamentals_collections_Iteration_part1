@@ -215,3 +215,23 @@ for val in student.values():
     total_students = val + total_students
 print(total_students)
 
+#Exercise 12 
+
+def fizzbuzz(start, end):
+    results = []
+    one_two_100 = range(start, end)
+    # loops through the range and prints a message whether or not the number is divisable by 3, 5 or both
+    for num in one_two_100:
+        if (num % 3 == 0) & (num % 5 == 0):
+            results.append('Generaly Assembly')
+        elif num % 3 == 0:
+            results.append('General')
+        elif num % 5 == 0:
+            results.append('Assembly')
+        else:
+            results.append(num)
+    return results    
+
+for result in fizzbuzz(1, 101):
+    print(result)
+
